@@ -1,12 +1,14 @@
 %define name cdparanoia-plugin
 %define version 0.1
-%define release %mkrel 12
+%define release %mkrel 13
 
 Summary: Digital CD playback plugin for XMMS
 Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: %{name}-%{version}.tar.bz2
+#gw ignore the results of the cdparanoia configure check
+Patch0: cdparanoia-plugin-0.1-configure-check.patch
 URL: http://www02.u-page.so-net.ne.jp/ca2/kzmi/xmms/
 License: GPLv2+
 Group: Sound
@@ -23,6 +25,7 @@ can use the usual effect and visualization plugins.
 
 %prep
 %setup -q
+%apply_patches
 aclocal-1.4
 autoconf
 automake-1.4 --foreign
