@@ -1,6 +1,6 @@
 %define name cdparanoia-plugin
 %define version 0.1
-%define release %mkrel 13
+%define release %mkrel 14
 
 Summary: Digital CD playback plugin for XMMS
 Name: %{name}
@@ -15,7 +15,7 @@ Group: Sound
 BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: libxmms-devel
 BuildRequires: libcdda-devel
-BuildRequires: automake1.4
+BuildRequires: automake
 Requires: xmms
 
 %description
@@ -26,9 +26,9 @@ can use the usual effect and visualization plugins.
 %prep
 %setup -q
 %apply_patches
-aclocal-1.4
+aclocal
 autoconf
-automake-1.4 --foreign
+automake -a --foreign
 libtoolize --force
 
 %build
