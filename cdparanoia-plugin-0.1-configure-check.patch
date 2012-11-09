@@ -1,0 +1,22 @@
+--- cdparanoia-plugin-0.1/configure.in.0000~	2002-06-15 19:49:33.000000000 +0200
++++ cdparanoia-plugin-0.1/configure.in	2011-07-26 09:05:56.000000000 +0200
+@@ -1,8 +1,8 @@
+ 
+-AC_INIT
++AC_INIT(cdparanoia-plugin,0.1)
+ AC_CONFIG_SRCDIR(Input/cdparanoia/cdparanoia.c)
+ AM_CONFIG_HEADER(config.h)
+-AM_INIT_AUTOMAKE(xmms)
++AM_INIT_AUTOMAKE(cdparanoia-plugin,0.1)
+ AC_DISABLE_STATIC
+ AC_LIBTOOL_SETUP
+ 
+@@ -16,7 +16,7 @@ AM_PROG_LIBTOOL
+ AM_PATH_GLIB(1.2.2,,AC_MSG_ERROR([*** GLIB >= 1.2.2 not installed - please install first ***]))
+ AM_PATH_GTK(1.2.2,,AC_MSG_ERROR([*** GTK+ >= 1.2.2 not installed - please install first ***]),gthread)
+ AM_PATH_XMMS(1.2.7,,AC_MSG_ERROR([*** XMMS >= 1.2.7 not installed - please install first ***]))
+-AC_CHECK_HEADERS([cdda_interface.h cdda_paranoia.h],,AC_MSG_ERROR([*** CDDA Paranoia not installed ***])) 
++AC_CHECK_HEADERS([cdda_interface.h cdda_paranoia.h]) 
+ AC_CHECK_LIB(cdda_interface, cdda_open,,AC_MSG_ERROR([*** CDDA Paranoia not installed ***])) 
+ AC_CHECK_LIB(cdda_paranoia, paranoia_init,,AC_MSG_ERROR([*** CDDA Paranoia not installed ***])) 
+ 
