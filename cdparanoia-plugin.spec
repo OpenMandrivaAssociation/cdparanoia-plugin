@@ -25,7 +25,7 @@ can use the usual effect and visualization plugins.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 aclocal
 autoconf
 automake -a --foreign
