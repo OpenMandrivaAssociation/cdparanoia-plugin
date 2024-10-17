@@ -9,7 +9,7 @@ Release: %{release}
 Source0: %{name}-%{version}.tar.bz2
 #gw ignore the results of the cdparanoia configure check
 Patch0: cdparanoia-plugin-0.1-configure-check.patch
-URL: http://www02.u-page.so-net.ne.jp/ca2/kzmi/xmms/
+URL: https://www02.u-page.so-net.ne.jp/ca2/kzmi/xmms/
 License: GPLv2+
 Group: Sound
 BuildRoot: %{_tmppath}/%{name}-buildroot
