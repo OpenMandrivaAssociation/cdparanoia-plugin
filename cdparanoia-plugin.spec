@@ -13,6 +13,9 @@ URL: https://www02.u-page.so-net.ne.jp/ca2/kzmi/xmms/
 License: GPLv2+
 Group: Sound
 BuildRoot: %{_tmppath}/%{name}-buildroot
+BuildRequires:	autoconf
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires: libxmms-devel
 BuildRequires: libcdda-devel
 BuildRequires: automake
