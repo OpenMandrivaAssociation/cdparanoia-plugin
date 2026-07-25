@@ -1,6 +1,6 @@
 %define name cdparanoia-plugin
 %define version 0.1
-%define release %mkrel 14
+%define release 15
 
 Summary: Digital CD playback plugin for XMMS
 Name: %{name}
